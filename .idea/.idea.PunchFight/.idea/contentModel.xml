@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\ZI\.Rider2019.1\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\ZI\.Rider2019.1\system\resharper-host\local\Transient\ReSharperHost\v191\SolutionCaches\_PunchFight.-263509878.00" t="ExcludeRecursive" />
+    <e p="E:\HyperCasual\PunchFight" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="_RagdollManager" t="Include">
+          <e p="doc" t="Include">
+            <e p="READ ME.txt" t="Include" />
+          </e>
+          <e p="SA" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="AICharacterControlCustom.cs" t="Include" />
+              <e p="Bloom.cs" t="Include" />
+              <e p="EdgeDetection.cs" t="Include" />
+              <e p="PostEffectsBase.cs" t="Include" />
+              <e p="ThirdPersonCharacterUnity.cs" t="Include" />
+            </e>
+            <e p="Shaders" t="Include">
+              <e p="BlendForBloom.shader" t="Include" />
+              <e p="BlurAndFlares.shader" t="Include" />
+              <e p="BrightPassFilter2.shader" t="Include" />
+              <e p="EdgeDetectNormals.shader" t="Include" />
+              <e p="LensFlareCreate.shader" t="Include" />
+            </e>
+            <e p="Toon" t="Include">
+              <e p="ToonBasic.shader" t="Include" />
+              <e p="ToonBasicOutline.shader" t="Include" />
+            </e>
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="Editor" t="Include">
+              <e p="CrossPlatformInput" t="Include">
+                <e p="CrossPlatformInputInitialize.cs" t="Include" />
+              </e>
+              <e p="EditorUtils.cs" t="Include" />
+              <e p="ImageEffects" t="Include">
+                <e p="BloomEditor.cs" t="Include" />
+                <e p="EdgeDetectionEditor.cs" t="Include" />
+              </e>
+              <e p="RagdollBuilder.cs" t="Include" />
+              <e p="RagdollManagerEditor.cs" t="Include" />
+              <e p="RagdollManagerGenEditor.cs" t="Include" />
+              <e p="RagdollManagerPackageSetup.cs" t="Include" />
+            </e>
+            <e p="Examples" t="Include">
+              <e p="Bomb.cs" t="Include" />
+              <e p="Raycast_Spherecast.cs" t="Include" />
+              <e p="RigidbodyCollider.cs" t="Include" />
+              <e p="ThirPersonRagdollUser.cs" t="Include" />
+            </e>
+            <e p="Package Game" t="Include">
+              <e p="Control" t="Include">
+                <e p="HorseController.cs" t="Include" />
+                <e p="IRagdollUser.cs" t="Include" />
+                <e p="NPCControl.cs" t="Include" />
+                <e p="PlayerControl.cs" t="Include" />
+                <e p="RagdollUser.cs" t="Include" />
+                <e p="RagdollUserGenericHumanoid.cs" t="Include" />
+                <e p="RagdollUserUnityTPC.cs" t="Include" />
+                <e p="ThirdPersonCharacter.cs" t="Include" />
+                <e p="ThirdPersonHorse.cs" t="Include" />
+              </e>
+              <e p="Misc" t="Include">
+                <e p="Explosion.cs" t="Include" />
+                <e p="ExplosionManager.cs" t="Include" />
+                <e p="FollowCamera.cs" t="Include" />
+                <e p="GameControl.cs" t="Include" />
+                <e p="GameUtils.cs" t="Include" />
+                <e p="GrabTrigger.cs" t="Include" />
+                <e p="OrbitCameraController.cs" t="Include" />
+                <e p="ProjectileTrigger.cs" t="Include" />
+                <e p="RayShootRM.cs" t="Include" />
+                <e p="SignCarrier.cs" t="Include" />
+                <e p="Trigger.cs" t="Include" />
+              </e>
+              <e p="Projectiles" t="Include">
+                <e p="BallProjectile.cs" t="Include" />
+                <e p="HarpoonBallProjectile.cs" t="Include" />
+                <e p="InflatableBall.cs" t="Include" />
+                <e p="Mine.cs" t="Include" />
+                <e p="MineTrigger.cs" t="Include" />
+                <e p="NPCShootScript.cs" t="Include" />
+                <e p="PlayerShootBodyScript.cs" t="Include" />
+                <e p="ProjectileBase.cs" t="Include" />
+                <e p="RigidBodyBullet.cs" t="Include" />
+                <e p="RocketBallProjectile.cs" t="Include" />
+                <e p="ShootScript.cs" t="Include" />
+                <e p="SoapBallProjectile.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Ragdoll System" t="Include">
+              <e p="BodyColliderScript.cs" t="Include" />
+              <e p="ColliderScript.cs" t="Include" />
+              <e p="RagdollManager.cs" t="Include" />
+              <e p="RagdollManagerGen.cs" t="Include" />
+              <e p="RagdollManagerHum.cs" t="Include" />
+              <e p="Utilities.cs" t="Include" />
+            </e>
+            <e p="TEST" t="Include">
+              <e p="AndroidTest.cs" t="Include" />
+              <e p="HORSE_GEN_TEST.cs" t="Include" />
+              <e p="HUM_TEST1.cs" t="Include" />
+              <e p="SWAT_GEN_TEST.cs" t="Include" />
+              <e p="TEST.cs" t="Include" />
+              <e p="TestRMGen.cs" t="Include" />
+              <e p="TestWebScene1.cs" t="Include" />
+              <e p="TestWebScene2.cs" t="Include" />
+              <e p="WebScene1Camera.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Shaders" t="Include">
+            <e p="LightBeamColorPoint.shader" t="Include" />
+            <e p="LightBeamTexturePoint.shader" t="Include" />
+          </e>
+        </e>
+        <e p="LeanTween" t="Include">
+          <e p="Editor" t="Include">
+            <e p="LeanTweenDocumentationEditor.cs" t="Include" />
+          </e>
+          <e p="Examples" t="Include">
+            <e p="Archived" t="Include">
+              <e p="2dUnlitWithFade.shader" t="Include" />
+              <e p="OldGUIExamplesCS.cs" t="Include" />
+              <e p="TestingPunch.cs" t="Include" />
+              <e p="TestingRigidbodyCS.cs" t="Include" />
+            </e>
+            <e p="Scripts" t="Include">
+              <e p="Following.cs" t="Include" />
+              <e p="GeneralAdvancedTechniques.cs" t="Include" />
+              <e p="GeneralBasic.cs" t="Include" />
+              <e p="GeneralBasics2d.cs" t="Include" />
+              <e p="GeneralCameraShake.cs" t="Include" />
+              <e p="GeneralEasingTypes.cs" t="Include" />
+              <e p="GeneralEventsListeners.cs" t="Include" />
+              <e p="GeneralSequencer.cs" t="Include" />
+              <e p="GeneralSimpleUI.cs" t="Include" />
+              <e p="GeneralUISpace.cs" t="Include" />
+              <e p="LogoCinematic.cs" t="Include" />
+              <e p="PathBezier.cs" t="Include" />
+              <e p="PathBezier2d.cs" t="Include" />
+              <e p="PathSpline.cs" t="Include" />
+              <e p="PathSpline2d.cs" t="Include" />
+              <e p="PathSplineEndless.cs" t="Include" />
+              <e p="PathSplinePerformance.cs" t="Include" />
+              <e p="PathSplines.cs" t="Include" />
+              <e p="PathSplineTrack.cs" t="Include" />
+              <e p="TestingUnitTests.cs" t="Include" />
+              <e p="TestingZLegacy.cs" t="Include" />
+              <e p="TestingZLegacyExt.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Framework" t="Include">
+            <e p="LeanAudio.cs" t="Include" />
+            <e p="LeanSmooth.cs" t="Include" />
+            <e p="LeanTest.cs" t="Include" />
+            <e p="LeanTween.cs" t="Include" />
+            <e p="LeanTweenExt.cs" t="Include" />
+            <e p="LTDescr.cs" t="Include" />
+            <e p="LTDescrOptional.cs" t="Include" />
+            <e p="LTSeq.cs" t="Include" />
+          </e>
+          <e p="license.txt" t="Include" />
+          <e p="Readme.txt" t="Include" />
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="AnimationsEvents.cs" t="Include" />
+          <e p="ButtonFunctions.cs" t="Include" />
+          <e p="CollisionDetect.cs" t="Include" />
+          <e p="Damage.cs" t="Include" />
+          <e p="DisplayPoints.cs" t="Include" />
+          <e p="GridManager.cs" t="Include" />
+          <e p="InputWord.cs" t="Include" />
+          <e p="LetterProperties.cs" t="Include" />
+          <e p="LetterSelection.cs" t="Include" />
+          <e p="LevelManager.cs" t="Include" />
+          <e p="LevelWord.cs" t="Include" />
+          <e p="MoveController.cs" t="Include" />
+          <e p="MoveLetters.cs" t="Include" />
+          <e p="RandomGenerator.cs" t="Include" />
+          <e p="TileMissed.cs" t="Include" />
+          <e p="WordGenerator.cs" t="Include" />
+        </e>
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="PunchFight.sln" t="IncludeFlat" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
