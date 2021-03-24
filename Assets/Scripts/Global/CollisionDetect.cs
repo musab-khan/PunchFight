@@ -27,7 +27,7 @@ public class CollisionDetect : MonoBehaviour
     
     private void OnCollisionEnter(Collision other)
     {
-        Debug.Log($"hitter{gameObject.transform.root.name} body part{ other.collider.name } character { other.collider.transform.root.name }");
+//        Debug.Log($"hitter{gameObject.transform.root.name} body part{ other.collider.name } character { other.collider.transform.root.name }");
         hitEffect.SetActive(false);
         
         BodyColliderScript bcs = other.collider.GetComponent<BodyColliderScript>();
@@ -40,13 +40,15 @@ public class CollisionDetect : MonoBehaviour
             hitEffect.transform.position = contact.point;
             hitEffect.SetActive(true);
             cameraShaker.shakeDuration = 1f;
+            AudioManager.Instance.PlayHitSound();
             
             // starting hit reaction by adding the hit reaction and a small force value
 
             if (MoveController.Instance.startRagdoll)
             {
-                Debug.Log("Ragdoll Started");
-                bcs.ParentRagdollManager.startRagdoll(indices);
+//                Debug.Log("Ragdoll Started");
+                forceValue = 0.05f;
+                bcs.ParentRagdollManager.startRagdoll(indices,rotation.eulerAngles  * forceValue );
             }
             else
             {

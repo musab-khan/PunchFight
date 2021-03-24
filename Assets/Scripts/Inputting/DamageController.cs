@@ -42,10 +42,11 @@ public class DamageController : MonoBehaviour
 
         if (playerHealth == 0)
         {
-            lostPanel.SetActive(true);
-            gamePanel.SetActive(false);
-            progressPanel.SetActive(false);
+            GameManager.Instance.canInput = false;
+            MoveController.Instance.startRagdoll = true;
+            LevelFinished();
         }
+        MoveController.Instance.OpponentMove();
     }
 
     public void EnemyHit()
@@ -55,27 +56,29 @@ public class DamageController : MonoBehaviour
 
         if (enemyHealth == 0)
         {
-            wonPanel.SetActive(true);
-            gamePanel.SetActive(false);
-            progressPanel.SetActive(false);
+            GameManager.Instance.canInput = false;
+            MoveController.Instance.startRagdoll = true;
+            LevelFinished();
         }
+        MoveController.Instance.PlayerMove();
     }
 
     public void DecideWinner()
     {
         if (playerHealth > enemyHealth)
         {
-            wonPanel.SetActive(true);
-            gamePanel.SetActive(false);
-            progressPanel.SetActive(false);
+            GameManager.Instance.LevelWon();
         }
 
         else
         {
-            lostPanel.SetActive(true);
-            gamePanel.SetActive(false);
-            progressPanel.SetActive(false);
+            GameManager.Instance.LevelFailed();
         }
+    }
+
+    public void LastMove()
+    {
+        StartCoroutine(LastMoveWait());
     }
 
     public void closePanels()
@@ -83,5 +86,36 @@ public class DamageController : MonoBehaviour
         wonPanel.SetActive(false);
         gamePanel.SetActive(true);
         progressPanel.SetActive(true);
+    }
+    
+    public void LevelFinished()
+    {
+        StartCoroutine(LevelEnd());
+        Time.timeScale = 0.3f;
+    }
+
+    IEnumerator LevelEnd()
+    {
+        yield return new WaitForSeconds(2.0f);
+        DecideWinner();
+    }
+
+    IEnumerator LastMoveWait()
+    {
+        yield return new WaitForSeconds(3.0f);
+        
+        if (playerHealth > enemyHealth)
+        {
+            MoveController.Instance.startRagdoll = true;
+            MoveController.Instance.PlayerMove();
+            LevelFinished();
+        }
+
+        else
+        {
+            MoveController.Instance.startRagdoll = true;
+            MoveController.Instance.OpponentMove();
+            LevelFinished();
+        }
     }
 }

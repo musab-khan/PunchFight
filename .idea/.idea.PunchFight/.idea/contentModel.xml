@@ -169,6 +169,7 @@
         <e p="Scripts" t="Include">
           <e p="Global" t="Include">
             <e p="AnimationsEvents.cs" t="Include" />
+            <e p="AudioManager.cs" t="Include" />
             <e p="CameraShake.cs" t="Include" />
             <e p="CollisionDetect.cs" t="Include" />
             <e p="LetterProperties.cs" t="Include" />

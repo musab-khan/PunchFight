@@ -632,8 +632,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.5726306, y: 0.18804851, z: 0.3221466}
-  m_Center: {x: -0.031830195, y: 0.001550779, z: 0.022384232}
+  m_Size: {x: 0.38132644, y: 0.18804851, z: 0.24712522}
+  m_Center: {x: 0.009363221, y: 0.001550779, z: 0.005171872}
 --- !u!144 &6374545571029628653
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -1193,7 +1193,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 3231115084579544917}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.08670448
   m_Height: 0.30876014
   m_Direction: 1
@@ -1601,8 +1601,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.54727226, y: 0.36541802, z: 0.34788725}
-  m_Center: {x: -0.030348629, y: 0.121694654, z: 0.018096738}
+  m_Size: {x: 0.38609916, y: 0.36541802, z: 0.2753733}
+  m_Center: {x: -0.007727855, y: 0.121694654, z: 0.008510707}
 --- !u!114 &6374545570856206547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1874,9 +1874,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.07256516
-  m_Height: 0.24620804
+  m_Height: 0.1451303
   m_Direction: 1
-  m_Center: {x: 0.011084687, y: 0.16951947, z: 0.0007049516}
+  m_Center: {x: 0.011084686, y: 0.17, z: 0.0007049396}
 --- !u!114 &6374545569762971225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1889,7 +1889,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79891e13ba6068641aaee32bdf3e3a39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceValue: 10
   hitEffect: {fileID: 0}
 --- !u!1 &6374545570069869994
 GameObject:
@@ -1935,7 +1934,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
@@ -1948,7 +1947,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 6374545570069869994}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.051777072
   m_Height: 0.2122593
   m_Direction: 1
@@ -2013,9 +2012,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.07087414
-  m_Height: 0.2636833
+  m_Height: 0.14174826
   m_Direction: 1
-  m_Center: {x: -0.016750295, y: 0.1260826, z: 0.005633403}
+  m_Center: {x: -0.016750295, y: 0.09, z: 0.0056334026}
 --- !u!114 &6374545570211896914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2028,7 +2027,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79891e13ba6068641aaee32bdf3e3a39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceValue: 10
   hitEffect: {fileID: 0}
 --- !u!1 &6374545571719177851
 GameObject:
@@ -2074,7 +2072,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
@@ -2087,7 +2085,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 6374545571719177851}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.051777072
   m_Height: 0.2122593
   m_Direction: 1
@@ -2758,7 +2756,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: -1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.20728385, y: 0.0954961, z: -0.005380842}
+  m_ConnectedAnchor: {x: 0.20728385, y: 0.0954961, z: -0.005380812}
   serializedVersion: 2
   m_SwingAxis: {x: -1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -3432,7 +3430,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 9063115831776760496}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.08077013
   m_Height: 0.30374184
   m_Direction: 1

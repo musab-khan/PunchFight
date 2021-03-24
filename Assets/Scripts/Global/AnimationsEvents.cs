@@ -8,6 +8,10 @@ public class AnimationsEvents : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         animator.SetInteger("AnimationIndex", -1);
+
+        if (MoveController.Instance.startRagdoll)
+            return;
+        
         MoveController.Instance.ResetRigidBodies();
     }
 

@@ -24,11 +24,26 @@ public class WordGenerator : MonoBehaviour
     private int wordCount = 0;
     private LevelWord[] words;
 
+    private TouchScreenKeyboard keyboard;
+
     void Awake()
     {
         PreparePool();
         words = GameManager.Instance.Levels[GameManager.Instance.curLevel].GetComponent<LevelWords>().allLevelWords;
+//        TouchScreenKeyboard.Open("", TouchScreenKeyboardType.Default);
         playerInput.ActivateInputField();
+    }
+
+    void Update()
+    {
+        if (!TouchScreenKeyboard.visible)
+        {
+            if (Input.touchCount > 0)
+            {
+//                TouchScreenKeyboard.Open("", TouchScreenKeyboardType.Default);
+                playerInput.ActivateInputField();
+            }
+        }
     }
 
     void PreparePool()
@@ -87,10 +102,11 @@ public class WordGenerator : MonoBehaviour
         
             PlaceTiles();
         }
-
+        
         else
         {
-            DamageController.Instance.DecideWinner();
+            GameManager.Instance.canInput = false;
+            DamageController.Instance.LastMove();
         }
     }
 
@@ -119,44 +135,49 @@ public class WordGenerator : MonoBehaviour
 
     public void InputWord()
     {
-        for (int i = 0; i < playerInput.text.Length; i++)
+        if (GameManager.Instance.canInput)
         {
-            if (playerTiles[i].GetComponent<LetterProperties>().Character.Equals(playerInput.text[i].ToString().ToUpper()))
+            for (int i = 0; i < playerInput.text.Length; i++)
             {
-                playerTiles[i].GetComponent<Image>().color = Color.green;
+                if (playerTiles[i].GetComponent<LetterProperties>().Character.Equals(playerInput.text[i].ToString().ToUpper()))
+                {
+                    playerTiles[i].GetComponent<Image>().color = Color.green;
+                }
+
+                else
+                {
+                    playerTiles[i].GetComponent<Image>().color = Color.red;
+                }
             }
 
-            else
+            if (playerInput.text.Length == wordToGenerate.Length)
             {
-                playerTiles[i].GetComponent<Image>().color = Color.red;
+                SubmitInput();
             }
         }
-
-        if (playerInput.text.Length == wordToGenerate.Length)
-        {
-            SubmitInput();
-        }
+        
     }
 
     public void SubmitInput()
     {
-        if (playerInput.text.ToUpper().Equals(wordToGenerate))
+        if (GameManager.Instance.canInput)
         {
-            MoveController.Instance.PlayerMove();
-            DamageController.Instance.EnemyHit();
-            StopAllCoroutines();
-            nextWord();
-        }
+            if (playerInput.text.ToUpper().Equals(wordToGenerate))
+            {
+                DamageController.Instance.EnemyHit();
+                StopAllCoroutines();
+                nextWord();
+            }
 
-        else
-        {
-            MoveController.Instance.OpponentMove();
-            DamageController.Instance.PlayerHit();
-            StopAllCoroutines();
-            nextWord();
-        }
+            else
+            {
+                DamageController.Instance.PlayerHit();
+                StopAllCoroutines();
+                nextWord();
+            }
 
-        playerInput.text = "";
+            playerInput.text = "";
+        }
     }
 
     void nextWord()

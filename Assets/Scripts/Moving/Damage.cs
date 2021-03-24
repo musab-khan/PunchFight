@@ -72,7 +72,7 @@ public class Damage : MonoBehaviour
    public void LevelFinished()
    {
       StartCoroutine(LevelEnd());
-//      Time.timeScale = 0.3f;
+      Time.timeScale = 0.3f;
    }
 
    IEnumerator LevelEnd()

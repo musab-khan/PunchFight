@@ -17,6 +17,8 @@ public class LevelManager: MonoBehaviour
     public GameObject GamePlayPanel;
     public GameObject ProgressPanel;
 
+    public GameObject[] environments;
+
     void Awake()
     {
         if (!Instance)

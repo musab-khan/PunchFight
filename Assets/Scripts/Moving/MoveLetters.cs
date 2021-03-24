@@ -9,18 +9,18 @@ public class MoveLetters : MonoBehaviour
     [SerializeField] private RectTransform pointStart;
     [SerializeField] private RectTransform pointEnd;
     [SerializeField] private List<RectTransform> lettersList;
-    [SerializeField] private float nextSpawnDelay;
+//    [SerializeField] private float nextSpawnDelay;
     [SerializeField] private Queue<LetterProperties> activeTiles;
     
     [Space]
     [Header("Spawn Times")]
-    [SerializeField] [Range(1f, 3f)] float minDuration;
-    [SerializeField] [Range(3f, 5f)] float maxDuration;
+    [SerializeField] [Range(1f, 2f)] float minDuration;
+    [SerializeField] [Range(2f, 4f)] float maxDuration;
     
     [Space]
     [Header("Move Times")]
     [SerializeField] [Range(1f, 2f)] float moveMinTime;
-    [SerializeField] [Range(2f, 4f)] float moveMaxTime;
+    [SerializeField] [Range(2f, 3f)] float moveMaxTime;
 
     [Space] 
     [Header("Effects")] 
@@ -53,25 +53,26 @@ public class MoveLetters : MonoBehaviour
             }
         }
         
-        updateDelay();
+//        updateDelay();
+        StartCoroutine(StartDelay(RandomGenerator.GenerateFloat(minDuration, maxDuration)));
     }
     
     
     // Update is called once per frame
-    void Update()
-    {
-        if (Time.time > nextSpawnDelay && LevelManager.Instance.isLevelRunning && !LevelManager.Instance.levelEnded)
-        {
-            MoveLetter();
-            updateDelay();
-        }
-    }
+//    void Update()
+//    {
+//        if (Time.time > nextSpawnDelay && LevelManager.Instance.isLevelRunning && !LevelManager.Instance.levelEnded)
+//        {
+//            MoveLetter();
+//            updateDelay();
+//        }
+//    }
     
-    void updateDelay()
-    {
-        float timeDelay = RandomGenerator.GenerateFloat(minDuration, maxDuration);
-        nextSpawnDelay = Time.time + timeDelay;
-    }
+//    void updateDelay()
+//    {
+//        float timeDelay = RandomGenerator.GenerateFloat(minDuration, maxDuration);
+//        nextSpawnDelay = Time.time + timeDelay;
+//    }
 
     void MoveLetter()
     {
@@ -82,13 +83,14 @@ public class MoveLetters : MonoBehaviour
 
         float duration =  RandomGenerator.GenerateFloat(moveMinTime, moveMaxTime);
 
-        LeanTween.moveX(rect, pointEnd.position.x - 150f, duration).setOnComplete(() =>
+        LeanTween.moveX(rect, pointEnd.position.x, duration).setOnComplete(() =>
         {
             if (rect.gameObject.activeSelf)
             {
                 activeTiles.Dequeue();
                 lettersList[randomLetter].gameObject.SetActive(false);
                 rect.transform.position = pointStart.position;
+                StartCoroutine(StartDelay(RandomGenerator.GenerateFloat(minDuration, maxDuration)));
             }
         });
     }
@@ -133,6 +135,8 @@ public class MoveLetters : MonoBehaviour
                     Damage.Instance.LevelFinished();
 //                    Damage.Instance.DecideWinner();
                 }
+                
+                StartCoroutine(StartDelay(RandomGenerator.GenerateFloat(minDuration, maxDuration)));
             }
             else
             {
@@ -141,6 +145,15 @@ public class MoveLetters : MonoBehaviour
                 MoveController.Instance.OpponentMove();
                 Damage.Instance.PlayerHit();
             }
+        }
+    }
+
+    IEnumerator StartDelay(float delay)
+    {
+        if (!LevelManager.Instance.levelEnded)
+        {
+            yield return new WaitForSeconds(delay);
+            MoveLetter();
         }
     }
     
