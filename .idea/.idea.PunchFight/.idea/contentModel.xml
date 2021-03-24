@@ -167,22 +167,44 @@
           <e p="Readme.txt" t="Include" />
         </e>
         <e p="Scripts" t="Include">
-          <e p="AnimationsEvents.cs" t="Include" />
-          <e p="ButtonFunctions.cs" t="Include" />
-          <e p="CollisionDetect.cs" t="Include" />
-          <e p="Damage.cs" t="Include" />
-          <e p="DisplayPoints.cs" t="Include" />
-          <e p="GridManager.cs" t="Include" />
-          <e p="InputWord.cs" t="Include" />
-          <e p="LetterProperties.cs" t="Include" />
-          <e p="LetterSelection.cs" t="Include" />
-          <e p="LevelManager.cs" t="Include" />
-          <e p="LevelWord.cs" t="Include" />
-          <e p="MoveController.cs" t="Include" />
-          <e p="MoveLetters.cs" t="Include" />
-          <e p="RandomGenerator.cs" t="Include" />
-          <e p="TileMissed.cs" t="Include" />
-          <e p="WordGenerator.cs" t="Include" />
+          <e p="Global" t="Include">
+            <e p="AnimationsEvents.cs" t="Include" />
+            <e p="CameraShake.cs" t="Include" />
+            <e p="CollisionDetect.cs" t="Include" />
+            <e p="LetterProperties.cs" t="Include" />
+            <e p="MainMenu.cs" t="Include" />
+            <e p="MoveController.cs" t="Include" />
+            <e p="RandomGenerator.cs" t="Include" />
+          </e>
+          <e p="Inputting" t="Include">
+            <e p="DamageController.cs" t="Include" />
+            <e p="GameManager.cs" t="Include" />
+            <e p="InputWord.cs" t="Include" />
+            <e p="LevelWords.cs" t="Include" />
+            <e p="WordGenerator.cs" t="Include" />
+          </e>
+          <e p="Moving" t="Include">
+            <e p="ButtonFunctions.cs" t="Include" />
+            <e p="Damage.cs" t="Include" />
+            <e p="DisplayPoints.cs" t="Include" />
+            <e p="GridManager.cs" t="Include" />
+            <e p="LevelManager.cs" t="Include" />
+            <e p="LevelWord.cs" t="Include" />
+            <e p="MoveLetters.cs" t="Include" />
+            <e p="TileMissed.cs" t="Include" />
+          </e>
+        </e>
+        <e p="UFE" t="Include">
+          <e p="GUI" t="Include">
+            <e p="Shaders" t="Include">
+              <e p="GUI Alpha Enabled.shader" t="Include" />
+            </e>
+          </e>
+          <e p="Sounds" t="Include">
+            <e p="Music" t="Include">
+              <e p="license.txt" t="Include" />
+            </e>
+          </e>
         </e>
       </e>
       <e p="obj" t="ExcludeRecursive" />
